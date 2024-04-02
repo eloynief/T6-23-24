@@ -32,9 +32,9 @@ public class HoraExacta extends Hora{
 	}
 
 	
-	
-	
-	
+	/**
+	 * 
+	 */
 	public void inc() {
 		
 		this.segundo++;

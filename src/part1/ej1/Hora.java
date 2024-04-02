@@ -10,8 +10,14 @@ public class Hora {
 	
 	
 	
+	public Hora() {
+	}
+
+
+
+
+
 	public Hora(int hora, int minuto) {
-		super();
 		if (hora>=0&&hora<24) {
 			this.hora = hora;
 		}

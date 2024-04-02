@@ -41,17 +41,20 @@ public class Main {
 		
 		horaExacta=new HoraExacta(hora, minuto, segundo);
 		
+		System.out.println("DATOS:");
 		
 		System.out.println(horaPuesta);
 		System.out.println(horaExacta);
-		
+		System.out.println();
 		
 		horaPuesta.inc();
 		
-		
+		System.out.println("DESPUES DEL INCREMENTO:");
 		
 		System.out.println(horaPuesta);
 		System.out.println(horaExacta);
+		System.out.println();
+		
 		
 		
 	}
