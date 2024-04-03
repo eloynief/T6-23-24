@@ -14,14 +14,24 @@ public class Perecedero extends Producto{
 	public boolean cambioPrecio() {
 		boolean esModificado=false;
 		int i=this.diasCad;
+		
+		int division=0;
+		
 		double abs=super.precio;
-		while(i>0&&i<4) {
+		//
+		while(i>0&&i<=4) {
 			
-			super.precio+=super.precio;
-			
+			division++;
 			i++;
+			
+		}
+		
+		if(division>0) {
+			super.precio=super.precio/division;
+
 			esModificado=true;
 		}
+		
 		return esModificado;
 	}
 
