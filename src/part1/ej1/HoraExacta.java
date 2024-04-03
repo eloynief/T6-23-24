@@ -41,7 +41,7 @@ public class HoraExacta extends Hora{
 		while(this.segundo>59) {
 			this.segundo-=60;
 			//el minuto de la hora exacta aumenta
-			inc();
+			super.inc();
 			
 		}
 		

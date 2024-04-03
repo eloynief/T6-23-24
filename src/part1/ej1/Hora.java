@@ -73,6 +73,10 @@ public class Hora {
 		while(minuto>59) {
 			this.hora++;
 			minuto-=60;
+			
+			if(hora>23) {
+				hora-=24;
+			}
 		}
 	}
 
