@@ -17,7 +17,6 @@ public class Perecedero extends Producto{
 		
 		int division=0;
 		
-		double abs=super.precio;
 		//
 		while(i>0&&i<=4) {
 			
