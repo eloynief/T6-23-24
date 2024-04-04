@@ -43,4 +43,17 @@ public class Producto {
 		return str;
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		boolean comprobacion=false;
+		Producto prodObj=(Producto)obj;
+		
+		if(prodObj.nombre.equals(this.nombre)) {
+			comprobacion=true;
+		}
+		
+		return comprobacion;
+	}
+	
+	
 }
