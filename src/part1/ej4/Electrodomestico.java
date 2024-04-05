@@ -8,18 +8,32 @@ public class Electrodomestico {
 		blanco,negro,rojo,azul,gris
 	}
 	
-	Color color=Color.blanco;
+	private Color color=Color.blanco;
 	
-	enum Consumo{
+	private enum Consumo{
 		A,B,C,D,E,F
 	}
 	
 	Consumo consumo=Consumo.F;
 
-	int peso=0;
+	private int peso=0;
 	
 
 	
+
+
+	public Electrodomestico() {
+		super();
+	}
+
+
+
+	public Electrodomestico(double precio, int peso) {
+		super();
+		this.precio = precio;
+		this.peso = peso;
+	}
+
 
 
 	public Electrodomestico(double precio, String color, String consumo, int peso) {
@@ -109,18 +123,27 @@ public class Electrodomestico {
 	
 	public void precioFinal() {
 		
-		switch(consumo) {
-		case A-> precio+=100;
-		case B-> precio+=80;
-		case C-> precio+=60;
-		case D-> precio+=50;
-		case E-> precio+=30;
-		case F-> precio+=10;
+		precio=switch(consumo) {
+		case A-> precio+100;
+		case B-> precio+80;
+		case C-> precio+60;
+		case D-> precio+50;
+		case E-> precio+30;
+		case F-> precio+10;
 		};
 		
-		switch(color) {
-		
-		};
+		if(peso<20&&peso>=0) {
+			precio+=10;
+		}
+		else if(peso<50&&peso>=20){
+			precio+=50;
+		}
+		else if(peso<80&&peso>=50){
+			precio+=80;
+		}
+		else if(peso>80){
+			precio+=100;
+		}
 	}
 	
 	
