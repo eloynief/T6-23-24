@@ -28,7 +28,7 @@ public class Lavadora extends Electrodomestico{
 		this.carga = carga;
 	}
 
-	
+	@Override
 	public void precioFinal(){
 		super.precioFinal();
 		
