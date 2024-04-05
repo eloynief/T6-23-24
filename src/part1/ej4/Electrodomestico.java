@@ -1,11 +1,11 @@
-package part1.ej3;
+package part1.ej4;
 
 public class Electrodomestico {
 	
 	private double precio=0;
 	
 	enum Color{
-		blanco,negro,azul,gris
+		blanco,negro,rojo,azul,gris
 	}
 	
 	Color color=Color.blanco;
@@ -63,8 +63,9 @@ public class Electrodomestico {
 	}
 
 
-	public Consumo getConsumo() {
-		return consumo;
+	public char getConsumo() {
+		//correccion
+		return String.valueOf(consumo).charAt(0);
 	}
 
 
@@ -75,7 +76,52 @@ public class Electrodomestico {
 		
 	}
 	
+	/**
+	 * 
+	 * @param letra
+	 * @return
+	 */
+	public void comprobarConsumoEnergetico(char letra) {
+		boolean comprobacion=false;
+		
+		String cons=String.valueOf(letra);
+		
+		switch(letra) {
+		case 'A','B','C','D','E','F'-> this.consumo=Consumo.valueOf(cons);
+		
+		default-> this.consumo=Consumo.F;	
+		};
+		
+	}
 	
+	public void comprobarColor(String color){
+		String colorMin=color.toLowerCase();
+
+		switch(colorMin) {
+		case "blanco","negro","rojo","azul","gris"-> this.consumo=Consumo.valueOf(colorMin);
+		
+		default-> this.consumo=Consumo.F;	
+		};
+		
+	}
+	
+	
+	
+	public void precioFinal() {
+		
+		switch(consumo) {
+		case A-> precio+=100;
+		case B-> precio+=80;
+		case C-> precio+=60;
+		case D-> precio+=50;
+		case E-> precio+=30;
+		case F-> precio+=10;
+		};
+		
+		switch(color) {
+		
+		};
+	}
 	
 	
 	
