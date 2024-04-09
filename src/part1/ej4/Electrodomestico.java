@@ -2,6 +2,9 @@ package part1.ej4;
 
 public class Electrodomestico {
 	
+	/* 
+	 * si el hijo tiene que hacer uso de una variable y no quieres usar setters, cambia visibilidad a protecteed
+	 */
 	private double precio=0;
 	
 	enum Color{
@@ -63,8 +66,8 @@ public class Electrodomestico {
 
 
 
-	public Color getColor() {
-		return color;
+	public String getColor() {
+		return color.toString();
 	}
 
 
@@ -96,6 +99,26 @@ public class Electrodomestico {
 	 * @return
 	 */
 	public void comprobarConsumoEnergetico(char letra) {
+		//
+		boolean comprobacion=false;
+		
+		//asignamos el valor de la letra escrita
+		String cons=String.valueOf(letra).toUpperCase();
+		
+		switch(letra) {
+		case 'A','B','C','D','E','F'-> this.consumo=Consumo.valueOf(cons);
+		
+		default-> this.consumo=Consumo.F;	
+		};
+		
+	}
+
+	/**
+	 * 
+	 * @param letra
+	 * @return
+	 */
+	public void comprobarConsumoEnergetico2(char letra) {
 		boolean comprobacion=false;
 		
 		String cons=String.valueOf(letra);
