@@ -6,6 +6,15 @@ public class Rectangulo extends Poligono{
 	
 	private double lado2;
 	
+	
+	
+	
+	public Rectangulo(double lado1, double lado2) {
+		super();
+		this.lado1 = lado1;
+		this.lado2 = lado2;
+	}
+
 	@Override
 	public double area() {
 		double num=0;

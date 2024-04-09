@@ -29,6 +29,8 @@ public class Main {
 			switch(opcion) {
 			case 1:{
 				
+				triangulo=new Triangulo();
+				
 				break;
 			}
 			case 2:{

@@ -11,9 +11,24 @@ public abstract class Poligono {
 	public abstract double area();
 	
 	
+	 
 	
 	
-	
+	public Poligono() {
+	}
+
+
+
+
+
+	public Poligono(int numeroLados) {
+		this.numeroLados = numeroLados;
+	}
+
+
+
+
+
 	/**
 	 * @return the numeroLados
 	 */
