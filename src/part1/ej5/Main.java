@@ -8,6 +8,10 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
+		Poligono triangulo=new Triangulo();
+		
+		Poligono rectangulo=new Rectangulo();
+		
 		int opcion=0;
 		
 		int num=0;
