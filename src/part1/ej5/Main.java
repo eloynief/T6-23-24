@@ -14,8 +14,11 @@ public class Main {
 		
 		int opcion=0;
 		
-		int num=0;
+		int lado1=0;
 		
+		int lado2=0;
+		
+		int lado3=0;
 		
 		
 		do {
@@ -29,15 +32,48 @@ public class Main {
 			switch(opcion) {
 			case 1:{
 				
-				triangulo=new Triangulo();
+				System.out.println("INTRODUZCA EL VALOR DE LOS LADOS:");
+
+				System.out.println("LADO 1:");
+
+				lado1=sc.nextInt();
+				
+				System.out.println("LADO 2:");
+
+				lado2=sc.nextInt();
+				
+				System.out.println("LADO 3:");
+
+				lado3=sc.nextInt();
+				
+				triangulo=new Triangulo(lado1, lado2, lado3);
+				
+				ListaPoligonos.introducirValor(triangulo);
 				
 				break;
 			}
 			case 2:{
 				
+				System.out.println("INTRODUZCA EL VALOR DE LOS LADOS:");
+
+				System.out.println("LADO 1:");
+
+				lado1=sc.nextInt();
+				
+				System.out.println("LADO 2:");
+
+				lado2=sc.nextInt();
+				
+				rectangulo=new Rectangulo(lado1, lado2);
+				
+				ListaPoligonos.introducirValor(rectangulo);
+				
 				break;
 			}
 			case 3:{
+				
+//				System.out.println(ListaPoligonos.arrayPol.toString());
+				ListaPoligonos.muestraValores();
 				
 				break;
 			}

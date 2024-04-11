@@ -2,7 +2,7 @@ package part1.ej5;
 
 public abstract class Poligono {
 	
-	protected int numeroLados;
+	protected int numeroLados=0;
 	
 	/**
 	 * Metodo abstracto

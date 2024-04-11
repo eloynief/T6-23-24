@@ -10,12 +10,20 @@ public class Triangulo extends Poligono{
 	
 	
 	
+	public Triangulo() {
+		super(3);
+	}
+
+	
+
 	public Triangulo(double lado1, double lado2, double lado3) {
-		super();
+		super(3);
 		this.lado1 = lado1;
 		this.lado2 = lado2;
 		this.lado3 = lado3;
 	}
+
+
 
 	@Override
 	public double area() {

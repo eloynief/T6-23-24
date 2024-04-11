@@ -9,8 +9,14 @@ public class Rectangulo extends Poligono{
 	
 	
 	
+	
+
+	public Rectangulo() {
+		super(4);
+	}
+
 	public Rectangulo(double lado1, double lado2) {
-		super();
+		super(4);
 		this.lado1 = lado1;
 		this.lado2 = lado2;
 	}
