@@ -5,12 +5,14 @@ public class Futbolista implements Comparable<Futbolista>{
 	//c#>java por esto
 	//region [atributos]
 	
-	private int id=0;
+	private int nCamiseta=0;
 	
 	private String nombre="";
 	
 	private int edad=0;
 
+	private int goles=0;
+	
 	//end region
 	
 	
@@ -24,14 +26,15 @@ public class Futbolista implements Comparable<Futbolista>{
 
 	/**
 	 * Construc con id nombre edd
-	 * @param id
+	 * @param nCamiseta
 	 * @param nombre
 	 * @param edad
 	 */
-	public Futbolista(int id, String nombre, int edad) {
-		this.id = id;
-		this.nombre = nombre;
-		this.edad = edad;
+	public Futbolista(int nCamiseta, String nombre, int edad,int goles) {
+		if(nCamiseta>0) this.nCamiseta = nCamiseta;
+		if(nombre!=null&&!nombre.equals(""))this.nombre = nombre;
+		if(edad>0) this.edad = edad;
+		if(goles>=0) this.goles=goles;
 	}
 	
 	
@@ -43,7 +46,7 @@ public class Futbolista implements Comparable<Futbolista>{
 	 * @return the id
 	 */
 	public int getId() {
-		return id;
+		return nCamiseta;
 	}
 
 
@@ -88,9 +91,27 @@ public class Futbolista implements Comparable<Futbolista>{
 	 * @param edad the edad to set
 	 */
 	public void setEdad(int edad) {
-		this.edad = edad;
+		if (edad>0) this.edad = edad;
 	}
 
+
+	
+	
+
+	/**
+	 * @return the goles
+	 */
+	public int getGoles() {
+		return goles;
+	}
+
+
+	/**
+	 * @param goles the goles to set
+	 */
+	public void setGoles(int goles) {
+		if(goles>=0) this.goles = goles;
+	}
 
 
 	/**
@@ -102,12 +123,25 @@ public class Futbolista implements Comparable<Futbolista>{
 		//se crea una var cuyo valor es 0
 		int var=0;
 
-		if(o.id<this.id) {
+		if(o.nCamiseta<this.nCamiseta) {
 			var++;
 		}
-		else if(o.id>this.id) {
+		else if(o.nCamiseta>this.nCamiseta) {
 			var--;
 		}
+		//si el numero de camiseta es el mismo
+		else {
+			//comparamos el nombre
+			var=this.nombre.compareTo(o.nombre);
+			
+//			if(this.nombre.compareTo(o.nombre)>0){
+//				var++;
+//			}
+//			else if (this.nombre.compareTo(o.nombre)<0) {
+//				var--;
+//			}
+		}
+		
 		
 		return var;
 	}
@@ -118,13 +152,25 @@ public class Futbolista implements Comparable<Futbolista>{
 	public String toString() {
 		String str="";
 		
-		str+="ID:" + id +"\n";
+		str+="ID:" + nCamiseta +"\n";
 		str+="Nombre=" + nombre +"\n";
 		str+="Edad=" + edad +"\n";
+		str+="Goles: "+goles+"\n";
 		return str;
 	}
 	
-	
+	@Override
+	public boolean equals(Object o) {
+		boolean comprobacion=false;
+		
+		Futbolista fut=(Futbolista) o;
+		
+		if(this.nCamiseta==fut.nCamiseta&&this.nombre.equals(fut.nombre)) {
+			comprobacion=true;
+		}
+		
+		return comprobacion;
+	}
 	
 	
 }
