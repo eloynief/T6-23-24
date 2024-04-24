@@ -1,0 +1,84 @@
+Ficha abstract (superclase):
+	
+	//atributos
+	
+	- int numId;
+	- String titulo;
+	
+	- abstract int prestamo;
+	
+	
+	
+	//getters 
+	
+	+getId(): int
+	
+	+getTitulo(): String
+	+setTitulo(titulo): void (no)
+	
+	//constructores
+	
+	Ficha();
+	
+	Ficha(String titulo);
+	
+	
+	Libro extends:
+		
+		- String autor;
+		- String editorial;
+		
+		prestamo=15;
+		
+		+getAutor(): String
+		+setAutor(String autor): void
+		
+		+getEditorial(): String
+		+setEditorial(String editorial): void
+	
+	Revista extends:
+		- int numRevista;
+		- int ano;
+		
+		prestamo=10;
+		
+		+getNumRevista(): int
+		+setNumRevista(int numRevista): void
+		
+		+getAno(): int
+		+setAno(int ano): void
+		
+	DVD extends:
+		
+		+ enum tipo("película", "documental", "serie")
+		
+		- String director;
+		- int ano;
+		- Tipo tipo;
+		
+		prestamo=5;
+		
+		+getDirector(): String
+		+setDirector(String director): void
+		
+		+getAno(): int
+		+setAno(int ano): void
+		
+		+getTipo(): String
+		+setTipo(String tipo): void
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	

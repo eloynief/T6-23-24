@@ -1,0 +1,54 @@
+class Cuenta:
+	
+	-nCuenta;
+	-saldo;
+	
+	getSaldo()
+	setSaldo()
+	
+	class Titular:
+	
+		- int DNI;
+		- String nombre;
+		- String apellido;
+		- int teléfono;
+		
+		getters setters de todo
+		
+	class CuentaAhorro extends Cuenta:
+		
+		- int cuota;
+		- int interes;
+		
+		getset de ambos
+		
+		
+		//metodos
+		
+		+void saldoNuevo(){saldo=intereses-saldo;}
+		+
+		
+		
+		
+	class CuentaCorriente extends Cuenta:
+		
+		- int cuota;
+		- int interes;
+		
+		getset de ambos
+		
+		
+		
+		class Transaccion extends CuentaCorriente:
+			
+			- int porcentaje;
+			
+			- int dia;
+			- int mes;
+			- int ano;
+			- int concepto;
+			- int importe;
+		
+		
+	
+		

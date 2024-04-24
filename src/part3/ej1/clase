@@ -1,0 +1,17 @@
+Vehiculo:
+	- String marca;
+	- String modelo;
+	- String color;
+	- String matricula;
+	- boolean motorEncendido;
+	- int marcha;
+	- double velocidad;
+	
+	+Vehiculo()
+	+Vehiculo(String marca)
+	
+	
+		
+		
+		
+		

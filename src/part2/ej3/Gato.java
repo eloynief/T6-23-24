@@ -2,13 +2,13 @@ package part2.ej3;
 
 import java.util.Random;
 
-public class Perro extends AnimalDomestico{
+public class Gato extends AnimalDomestico{
 
 	
 	@Override
 	public void hacerRuido() {
 		
-		System.out.println("Guau");
+		System.out.println("Miau");
 		
 	}
 
@@ -21,19 +21,17 @@ public class Perro extends AnimalDomestico{
 		
         int numeroAleatorio = random.nextInt(100); // Genera un número aleatorio entre 0 y 99
         
-        if (numeroAleatorio<90) {
+        if (numeroAleatorio<5) {
         	res=true;
         }
 		
 		return res;
 	}
 	
-	public void sacarPaseo() {
-		
-		System.out.println("El perro se va de paseo solo");
-		
-	}
 	
+	public void toserBolaPelo() {
+		System.out.println("El gato a escupido pelo");
+	}
 	
 	
 }
