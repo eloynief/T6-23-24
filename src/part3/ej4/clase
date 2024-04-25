@@ -1,0 +1,44 @@
+Agenda
+
+	Contacto:
+		- String nombre;
+		- long telefono;
+		
+		get set de todo
+		
+		+ getNombre(): String
+		
+		+ setNombre(nombre): void
+		
+		+ getTelefono(): long
+		
+		+ setTelefono(telefono): void
+		
+		
+		+ Contacto()
+		
+		+ Contacto(nombre,telefono)
+		
+		
+		
+		+ boolean equals (Object o){ variable= (Contacto) o; if this.nombre== variable.nombre}-> return true;
+		
+		
+		
+		Persona extends Contacto:
+			
+			- long cumple;
+			
+			get set
+			
+			
+			
+		Empresa extends Contacto:
+			
+			- String paginaWeb;
+			
+			get set
+			
+			
+			
+			

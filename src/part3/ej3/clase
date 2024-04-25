@@ -1,10 +1,20 @@
-class Cuenta:
+	class Cuenta:
 	
-	-nCuenta;
-	-saldo;
+	- String nCuenta;
+	- double saldo;
+	- Titular titulares[3]; //la cuenta tiene titulares
+	
 	
 	getSaldo()
 	setSaldo()
+	
+	+ ingresar(int cant): boolean
+	
+	+ retirar(int cant): boolean
+	
+	+ addTitular(Titular t) boolean
+	+ deleteTitular(Titular t) boolean
+	
 	
 	class Titular:
 	
@@ -35,20 +45,47 @@ class Cuenta:
 		- int cuota;
 		- int interes;
 		
+		- List<Transaccion> transacciones
+		
+		
 		getset de ambos
 		
 		
 		
 		class Transaccion extends CuentaCorriente:
-			
-			- int porcentaje;
+		
+			enum TipoMov{BIZUM,RECIBOS,TRANSFERENCIAS,IMPUESTOS}
+			- double porcentaje;
 			
 			- int dia;
 			- int mes;
 			- int ano;
-			- int concepto;
-			- int importe;
-		
-		
-	
+			- String concepto;
+			- double importe;
+			
+			+ getPorcentaje(): double
+			
+			+ getDia(): int
+			
+			+ setDia(): void
+			
+			+ getMes(): int
+			
+			+ setMes(): void
+			
+			+ getAno(): int
+			
+			+ setAno(): void
+			
+			+ getConcepto(): String
+			
+			+ setConcepto(): void
+			
+			+ getImporte(): double
+			
+			+ setImporte(): void
+			
+			+ Transaccion()
+			
+			+ Transaccion(porcentaje,dia,mes,ano,concepto,importe)
 		
